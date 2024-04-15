@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Home() {
     const [data, setData] = useState([])
     useEffect(() => {
-        axios.get('https://master-crud.onrender.com/users').then(res => setData(res.data)).catch(err => console.log(err));
+        axios.get('http://localhost:3000/users').then(res => setData(res.data)).catch(err => console.log(err));
     }, [])
     const handleDelete = (id)=>{
         const confirm = window.confirm('Would You Like to Delete ?');
